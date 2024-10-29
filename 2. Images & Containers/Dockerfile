@@ -2,8 +2,10 @@ FROM node:14
 
 WORKDIR /app
 
-COPY app/ /app/
+COPY package.json /app
 RUN npm install
+
+COPY app/ /app/
 
 EXPOSE 80
 
